@@ -1,26 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import NavBar from './components/NavBar'
+import SouvenirList from './components/SouvenirList'
+
 import './App.css';
 
 class App extends Component {
   render() {
+      const text = '텍스트표현';
+      const a = 1;
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <NavBar/>
+        <SouvenirList/>
+          <h2>{text}</h2>
+          <h2>{a < 1 ? '작나' : '크거나 같다'}</h2>
       </div>
+
     );
   }
 }
